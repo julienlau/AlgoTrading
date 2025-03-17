@@ -74,15 +74,9 @@ class Evaluation:
 		return (roi - RISK_FREE_RETURN)/sd
 
 	def complete_evaluation(self, get_plots=True, verbose=True):
-		'''
-		if verbose is True:
-			print("Running ", self.algo)
-			print("The Sharpe Ratio is ", self.sharpe_ratio())
-			print("The Sortino Ratio is ", self.sortino_ratio())
-			print("The return on investment is(in percentage) ", self.roi()*100)
+		if verbose:
+			print(f"algo = {self.algo}, Sharpe-Ratio = {self.sharpe_ratio():.2f}, Sortino-Ratio = {self.sortino_ratio():.2f}, ROI = {self.roi()*100:.2f} %")
 
-		if get_plots is True:
+		if get_plots:
 			self.plot_output()
-		'''
 		return self.sharpe_ratio(), self.sortino_ratio(), self.roi()*100
-		

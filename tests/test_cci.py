@@ -5,8 +5,8 @@ from algotrading.backtest import Backtest
 from algotrading.agents.cci_agent import CCI_Agent
 from algotrading.evaluation import Evaluation
 
-def test(year, stock):
-	filename = "../Historical Data/%s/%s-%s.csv" %(year, stock, year)
+def test(year, stock, get_plots=False, verbose=True):
+	filename = "../Historical data/%s/%s-%s.csv" %(year, stock, year)
 	prices = pd.read_csv(filename)["Close"]
 	dates = pd.read_csv(filename)["Date"]
 
@@ -18,7 +18,7 @@ def test(year, stock):
 
 	# class Evaluation takes for initialization - prices, output, name of algorithm, name of security
 	evaluator = Evaluation(prices, dates, output, "CCI", stock)
-	evaluator.complete_evaluation()
+	evaluator.complete_evaluation(get_plots, verbose)
 
 if __name__ == "__main__":
 	test(sys.argv[1], sys.argv[2])

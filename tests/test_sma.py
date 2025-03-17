@@ -5,8 +5,8 @@ from algotrading.backtest import Backtest
 from algotrading.agents.sma_agent import SMA_Agent
 from algotrading.evaluation import Evaluation
 
-def test(year, stock, window, up, down, get_plots=True, verbose=True):
-	filename = "../Historical Data/%s/%s-%s.csv" %(year, stock, year)
+def test(year, stock, window, up, down, get_plots=False, verbose=True):
+	filename = "../Historical data/%s/%s-%s.csv" %(year, stock, year)
 	prices = pd.read_csv(filename)["Close"]
 	dates = pd.read_csv(filename)["Date"]
 

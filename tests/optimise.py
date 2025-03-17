@@ -46,7 +46,7 @@ def run_optimisation(algo, year, stock, window, up, down):
 		year_list = [year]
 
 	for yr in year_list:
-		stocks_avail = os.listdir("../Historical Data/%s/" %(yr))
+		stocks_avail = os.listdir("../Historical data/%s/" %(yr))
 		stocks_avail = [x.split("-")[0] for x in stocks_avail]
 
 		if stock == "all":
