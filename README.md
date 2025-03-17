@@ -22,3 +22,15 @@ Python Implementations of popular Algorithmic Trading Strategies, along with gen
 18. Swing Charting
 19. Ichimoku Cloud
 20. Trend Quantification and Asset Allocation
+
+# Usage
+
+```
+$> python test.py cci all all
+algo = CCI, Sharpe-Ratio = -2.19, Sortino-Ratio = -2.47, ROI = -14.15 %
+algo = CCI, Sharpe-Ratio = 2.56, Sortino-Ratio = 310.18, ROI = 67.90 %
+algo = CCI, Sharpe-Ratio = 2.94, Sortino-Ratio = 180.35, ROI = 42.41 %
+algo = CCI, Sharpe-Ratio = 2.16, Sortino-Ratio = 358.16, ROI = 77.32 %
+algo = CCI, Sharpe-Ratio = 2.06, Sortino-Ratio = 4.07, ROI = 20.67 %
+algo = CCI, Sharpe-Ratio = -2.73, Sortino-Ratio = -2.77, ROI = -6.38 %
+```
